@@ -3,13 +3,13 @@ import 'package:number_trivia_app/core/error/exceptions.dart';
 import 'package:number_trivia_app/core/error/failures.dart';
 import '../datasources/number_trivia_local_data_source.dart';
 import '../datasources/number_trivia_remote_data_source.dart';
-import 'package:number_trivia_app/core/platform/network_info.dart';
+import 'package:number_trivia_app/core/network/network_info.dart';
 import '../../domain/entities/number_trivia.dart';
 import '../../domain/repositories/number_trivia_repository.dart';
 
 class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   final NumberTriviaRemoteDataSource remoteDataSource;
-  final NumberTriviaLocalData localDataSource;
+  final NumberTriviaLocalDataSource localDataSource;
   final NetworkInfo networkInfo;
 
   NumberTriviaRepositoryImpl({required this.remoteDataSource,
